@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>maldrion | биты, лицензии, exclusive</title>
+    <title>maldrion beats | биты, лицензии, exclusive, free for profit</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="maldrion beats — современные биты для хитов. Лицензии mp3 аренда, wav аренда, exclusive. Бесплатные FFP биты до 5000 прослушиваний. Купить биты, prod. by maldrion.">
+    <meta name="keywords" content="maldrion, maldrion beats, биты купить, купить бит, free for profit биты, exclusive бит, mp3 аренда, wav аренда, prod by maldrion, биты для рэпа, битмейкер, maldrion биты">
+    <meta name="author" content="maldrion">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="maldrion beats | биты и лицензии">
+    <meta property="og:description" content="Современные биты, прозрачные лицензии. Бесплатные FFP биты — твой трек окупает лицензию!">
+    <meta property="og:type" content="website">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://maldrion.ru">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,79 +24,164 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body {
-            background: #010101;
-            font-family: 'Inter', sans-serif;
-            color: #f0f2fa;
-            overflow-x: hidden;
+
+        /* CSS Variables for themes */
+        :root {
+            --bg-primary: #f5f5f7;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-feature: #ffffff;
+            --bg-freezone: #f9f9fb;
+            --text-primary: #1d1d1f;
+            --text-secondary: #6c6c70;
+            --text-muted: #86868b;
+            --border-color: rgba(0, 0, 0, 0.08);
+            --accent: #0071e3;
+            --accent-light: rgba(0, 113, 227, 0.08);
+            --accent-hover: #005bb5;
+            --price-color: #0071e3;
+            --hero-right-bg: #ffffff;
+            --howto-bg: #ffffff;
+            --chart-bg: #f0f0f2;
+            --chart-fill: #0071e3;
+            --success-bg: rgba(52, 199, 89, 0.1);
+            --success-border: rgba(52, 199, 89, 0.3);
         }
+
+        body.dark {
+            --bg-primary: #010101;
+            --bg-secondary: #0a0c14;
+            --bg-card: #0b0f18;
+            --bg-feature: rgba(10,14,23,0.6);
+            --bg-freezone: linear-gradient(125deg, #110e22, #080714);
+            --text-primary: #f0f2fa;
+            --text-secondary: #b7c2e0;
+            --text-muted: #6c768f;
+            --border-color: rgba(124, 92, 240, 0.2);
+            --accent: #7c5cf0;
+            --accent-light: rgba(124, 92, 240, 0.2);
+            --accent-hover: #5e3ed8;
+            --price-color: #cbb9ff;
+            --hero-right-bg: rgba(124,92,240,0.05);
+            --howto-bg: #070a12;
+            --chart-bg: #1a1e2c;
+            --chart-fill: #7c5cf0;
+            --success-bg: rgba(124, 92, 240, 0.15);
+            --success-border: rgba(124, 92, 240, 0.4);
+        }
+
+        body {
+            background: var(--bg-primary);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            transition: background 0.3s ease, color 0.2s ease;
+        }
+
         ::selection {
-            background: #7c5cf0;
+            background: var(--accent);
             color: white;
         }
+
         html {
             scroll-behavior: smooth;
         }
+
         .container {
-            max-width: 1400px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
+
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 40px;
+            padding: 0.4rem 1rem;
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .theme-toggle:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
         /* HEADER & HAMBURGER */
         header {
-            padding: 1.2rem 0;
-            border-bottom: 1px solid rgba(124, 92, 240, 0.2);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
             position: sticky;
             top: 0;
-            background: rgba(1, 1, 1, 0.85);
-            backdrop-filter: blur(16px);
+            background: rgba(var(--bg-primary-rgb, 245, 245, 247), 0.92);
+            backdrop-filter: blur(20px);
             z-index: 1000;
         }
+
+        body.dark header {
+            background: rgba(1, 1, 1, 0.85);
+        }
+
         .header-inner {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            max-width: 1400px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
+
         .logo h2 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #fff, #b8a6ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-primary);
             letter-spacing: -0.02em;
         }
+
         .logo span {
             font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
-            color: #8f9bb5;
+            color: var(--text-muted);
         }
+
         .nav-links {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
+
         .nav-links a {
             text-decoration: none;
-            color: #cdd6f4;
+            color: var(--text-primary);
             font-weight: 500;
             transition: 0.2s;
             font-size: 0.95rem;
             cursor: pointer;
+            opacity: 0.8;
         }
+
         .nav-links a:hover, .nav-links a.active {
-            color: #b69eff;
-            border-bottom: 2px solid #7c5cf0;
+            opacity: 1;
+            color: var(--accent);
+            border-bottom: 2px solid var(--accent);
             padding-bottom: 4px;
         }
+
         .hamburger {
             display: none;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             cursor: pointer;
-            color: #cdd6f4;
+            color: var(--text-primary);
         }
+
         .mobile-menu {
             position: fixed;
             top: 70px;
@@ -94,7 +189,7 @@
             width: 70%;
             max-width: 280px;
             height: calc(100vh - 70px);
-            background: #0a0c14;
+            background: var(--bg-secondary);
             backdrop-filter: blur(20px);
             z-index: 999;
             transition: 0.3s ease;
@@ -102,20 +197,24 @@
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            border-left: 1px solid rgba(124,92,240,0.3);
+            border-left: 1px solid var(--border-color);
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.05);
         }
+
         .mobile-menu a {
-            color: #e2e8ff;
+            color: var(--text-primary);
             text-decoration: none;
             font-weight: 500;
             font-size: 1.1rem;
             padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(124,92,240,0.2);
+            border-bottom: 1px solid var(--border-color);
             cursor: pointer;
         }
+
         .mobile-menu.open {
             right: 0;
         }
+
         @media (max-width: 900px) {
             .nav-links {
                 display: none;
@@ -127,6 +226,7 @@
                 padding: 0 1.2rem;
             }
         }
+
         /* hero */
         .hero {
             padding: 4rem 0 3rem;
@@ -136,199 +236,389 @@
             align-items: center;
             gap: 2rem;
         }
+
         .hero-left {
             flex: 1.2;
         }
+
         .hero-badge {
             font-family: 'JetBrains Mono', monospace;
-            background: rgba(124,92,240,0.2);
+            background: var(--accent-light);
             border-radius: 40px;
-            padding: 0.2rem 1rem;
+            padding: 0.3rem 1rem;
             display: inline-block;
             font-size: 0.75rem;
             margin-bottom: 1rem;
+            color: var(--accent);
         }
+
         .hero-left h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            font-weight: 800;
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 700;
             line-height: 1.1;
-            background: linear-gradient(135deg, #fff, #b9a9ff);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
+            color: var(--text-primary);
             margin-bottom: 1rem;
+            letter-spacing: -0.02em;
         }
+
         .hero-desc {
             font-size: 1.1rem;
-            color: #b7c2e0;
+            color: var(--text-secondary);
             max-width: 550px;
             margin: 1rem 0 1.5rem;
+            line-height: 1.5;
         }
+
         .hero-stats {
             display: flex;
             gap: 2rem;
             margin: 1.5rem 0;
         }
+
         .stat {
-            font-weight: 600;
+            font-weight: 500;
         }
+
         .stat-number {
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: #b69eff;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--accent);
         }
+
         .hero-right {
             flex: 0.8;
-            background: rgba(124,92,240,0.05);
-            border-radius: 48px;
+            background: var(--hero-right-bg);
+            border-radius: 32px;
             padding: 2rem;
             text-align: center;
-            border: 1px solid rgba(124,92,240,0.25);
+            border: 1px solid var(--border-color);
         }
+
         .section-title {
-            font-size: 2rem;
-            font-weight: 700;
+            font-size: 1.8rem;
+            font-weight: 600;
             margin: 3rem 0 1.5rem;
             letter-spacing: -0.02em;
-            border-left: 4px solid #7c5cf0;
+            border-left: 4px solid var(--accent);
             padding-left: 1rem;
+            color: var(--text-primary);
         }
+
+        /* Earnings Calculator Block */
+        .earnings-card {
+            background: var(--bg-card);
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .earnings-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .earnings-header i {
+            font-size: 2rem;
+            color: var(--accent);
+        }
+
+        .earnings-header h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .earnings-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .earnings-left {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .earnings-right {
+            flex: 1.2;
+            min-width: 250px;
+        }
+
+        .stream-slider {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            -webkit-appearance: none;
+            background: var(--border-color);
+            border-radius: 10px;
+            outline: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
+        .stream-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .earnings-result {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin: 0.5rem 0;
+        }
+
+        .earnings-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 0.5rem;
+            line-height: 1.4;
+        }
+
+        .success-note {
+            background: var(--success-bg);
+            border-left: 3px solid #34c759;
+            border-radius: 16px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+        }
+
+        body.dark .success-note {
+            border-left-color: var(--accent);
+        }
+
+        /* Chart */
+        .chart-container {
+            background: var(--chart-bg);
+            border-radius: 24px;
+            padding: 1rem;
+            height: 180px;
+            position: relative;
+        }
+
+        .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 140px;
+            gap: 0.5rem;
+        }
+
+        .bar {
+            flex: 1;
+            background: var(--chart-fill);
+            border-radius: 8px 8px 4px 4px;
+            transition: height 0.5s ease;
+            min-width: 35px;
+            opacity: 0.7;
+        }
+
+        .bar-label {
+            text-align: center;
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            color: var(--text-muted);
+        }
+
         .price-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.5rem;
             margin: 2rem 0;
         }
+
         .price-card {
-            background: #0b0f18;
-            border-radius: 32px;
+            background: var(--bg-card);
+            border-radius: 24px;
             padding: 1.6rem;
-            transition: all 0.2s;
-            border: 1px solid rgba(124,92,240,0.2);
+            transition: all 0.2s ease;
+            border: 1px solid var(--border-color);
         }
+
         .price-card:hover {
-            border-color: #7c5cf0;
-            transform: translateY(-5px);
+            border-color: var(--accent);
+            transform: translateY(-4px);
         }
+
         .price-name {
             font-family: 'JetBrains Mono', monospace;
             font-weight: 600;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
+            color: var(--text-primary);
         }
+
         .price-amount {
-            font-size: 2.2rem;
-            font-weight: 800;
-            color: #cbb9ff;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--price-color);
             margin: 0.5rem 0;
         }
+
         .badge-off {
-            background: #2a233c;
+            background: var(--bg-primary);
             border-radius: 30px;
             padding: 0.2rem 0.8rem;
             font-size: 0.7rem;
+            color: var(--text-muted);
         }
+
         .feature-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 1.8rem;
+            gap: 1.5rem;
             margin: 2rem 0;
         }
+
         .feature {
             flex: 1;
             min-width: 200px;
-            background: rgba(10,14,23,0.6);
-            border-radius: 28px;
+            background: var(--bg-feature);
+            border-radius: 24px;
             padding: 1.5rem;
-            backdrop-filter: blur(8px);
+            border: 1px solid var(--border-color);
+            transition: 0.2s;
         }
+
+        .feature i {
+            color: var(--accent);
+            font-size: 1.5rem;
+        }
+
         .free-zone {
-            background: linear-gradient(125deg, #110e22, #080714);
-            border-radius: 40px;
+            background: var(--bg-freezone);
+            border-radius: 32px;
             padding: 2rem;
             margin: 2rem 0;
-            border: 1px solid #ffb34740;
+            border: 1px solid var(--border-color);
         }
+
         .btn-primary {
-            background: #7c5cf0;
+            background: var(--accent);
             border: none;
-            padding: 0.9rem 2rem;
-            border-radius: 60px;
+            padding: 0.85rem 2rem;
+            border-radius: 980px;
             font-weight: 600;
             color: white;
             cursor: pointer;
             transition: 0.2s;
             font-size: 0.9rem;
         }
+
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: scale(0.98);
+        }
+
         .btn-outline {
             background: transparent;
-            border: 1px solid #7c5cf0;
-            padding: 0.9rem 2rem;
-            border-radius: 60px;
-            color: #cdbeff;
+            border: 1px solid var(--accent);
+            padding: 0.85rem 2rem;
+            border-radius: 980px;
+            color: var(--accent);
             font-weight: 500;
             cursor: pointer;
+            transition: 0.2s;
         }
+
+        .btn-outline:hover {
+            background: var(--accent-light);
+        }
+
         .social-icons {
             display: flex;
-            gap: 1.2rem;
+            gap: 1rem;
             margin: 2rem 0 1rem;
             justify-content: center;
         }
+
         .social-icon {
-            background: rgba(255,255,255,0.03);
-            padding: 0.7rem 1.2rem;
+            background: var(--bg-card);
+            padding: 0.6rem 1.2rem;
             border-radius: 40px;
             text-decoration: none;
-            color: #cdd6f4;
-            border: 1px solid #2a2a3a;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
             transition: 0.2s;
+            font-size: 0.9rem;
         }
+
         .social-icon:hover {
-            background: #7c5cf0;
-            border-color: #7c5cf0;
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
         }
+
         footer {
             text-align: center;
             padding: 2rem 0 3rem;
-            border-top: 1px solid rgba(124,92,240,0.2);
+            border-top: 1px solid var(--border-color);
             margin-top: 2rem;
-            color: #6c768f;
-            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-size: 0.8rem;
         }
+
         .howto-list {
             display: flex;
             flex-direction: column;
             gap: 1rem;
             margin-top: 1.2rem;
         }
+
         .howto-item {
             display: flex;
             align-items: baseline;
             gap: 0.8rem;
             font-size: 1rem;
         }
+
         .howto-num {
-            font-weight: 800;
-            color: #7c5cf0;
+            font-weight: 700;
+            color: var(--accent);
             font-size: 1.2rem;
             min-width: 32px;
         }
+
         .license-grid {
             display: flex;
             flex-direction: column;
             gap: 1rem;
         }
+
         .page {
             display: none;
             animation: fadePage 0.25s ease forwards;
         }
+
         .page.active {
             display: block;
         }
+
         @keyframes fadePage {
             from { opacity: 0; transform: translateY(5px);}
             to { opacity: 1; transform: translateY(0);}
         }
+
         @media (max-width: 700px) {
             .hero {
                 flex-direction: column;
@@ -339,6 +629,34 @@
             .howto-item {
                 font-size: 0.9rem;
             }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .earnings-grid {
+                flex-direction: column;
+            }
+        }
+
+        .howto-bg {
+            background: var(--howto-bg);
+            border-radius: 32px;
+            padding: 2rem;
+            margin: 2rem 0;
+            border: 1px solid var(--border-color);
+        }
+        
+        .important-notice {
+            background: var(--accent-light);
+            border-radius: 20px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            border-left: 3px solid var(--accent);
+        }
+        
+        .important-notice i {
+            color: var(--accent);
+            margin-right: 0.5rem;
         }
     </style>
 </head>
@@ -355,6 +673,7 @@
             <a class="nav-item" data-page="licenses">лицензии</a>
             <a class="nav-item" data-page="faq">faq</a>
             <a class="nav-item" data-page="contract">договор</a>
+            <button class="theme-toggle" id="themeToggle"><i class="fas fa-moon"></i> Тёмная тема</button>
         </div>
         <div class="hamburger" id="hamburger">
             <i class="fas fa-bars"></i>
@@ -366,11 +685,12 @@
         <a class="mobile-nav-item" data-page="licenses">лицензии</a>
         <a class="mobile-nav-item" data-page="faq">faq</a>
         <a class="mobile-nav-item" data-page="contract">договор</a>
+        <a id="mobileThemeToggle" style="cursor: pointer; margin-top: 1rem;"><i class="fas fa-moon"></i> Тёмная тема</a>
     </div>
 </header>
 
 <div class="container" id="app">
-    <!-- HOME PAGE (главная максимально детальная, стильная, без отзыва) -->
+    <!-- HOME PAGE с калькулятором дохода -->
     <div id="home-page" class="page active">
         <div class="hero">
             <div class="hero-left">
@@ -388,13 +708,66 @@
                 </div>
             </div>
             <div class="hero-right">
-                <i class="fas fa-headphones" style="font-size: 2.5rem; color: #7c5cf0; margin-bottom: 1rem;"></i>
+                <i class="fas fa-headphones" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
                 <p style="font-weight: 600;">🔥 акция: free for profit</p>
                 <p style="font-size: 0.9rem;">бери бит бесплатно, выпускай трек и монетизируй до 5к стримов</p>
                 <div style="margin-top: 1rem;"><span class="badge-off">#ffp</span> <span class="badge-off">[FREE FOR PROFIT]</span></div>
             </div>
         </div>
-        <!-- price preview -->
+
+        <!-- Калькулятор дохода с улучшенной логикой -->
+        <div class="earnings-card">
+            <div class="earnings-header">
+                <i class="fas fa-chart-line"></i>
+                <h3>💰 сколько заработает твой трек на БЕСПЛАТНОМ бите?</h3>
+            </div>
+            <div class="earnings-grid">
+                <div class="earnings-left">
+                    <p style="margin-bottom: 0.5rem;">Прослушивания на всех площадках:</p>
+                    <div class="stream-value" id="streamCountDisplay">5 000</div>
+                    <input type="range" id="streamSlider" min="0" max="50000" step="1000" value="5000" class="stream-slider">
+                    <div style="display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--text-muted);">
+                        <span>0</span><span>10k</span><span>20k</span><span>30k</span><span>40k</span><span>50k</span>
+                    </div>
+                    <div class="earnings-result" id="earningsAmount">≈ 350 ₽</div>
+                    <div class="earnings-note">
+                        <i class="fas fa-info-circle"></i> *Средний роялти на российских площадках — ~0.07₽ за стрим
+                    </div>
+                </div>
+                <div class="earnings-right">
+                    <div class="chart-container">
+                        <div class="chart-bars" id="chartBars">
+                            <div class="bar" style="height: 20px;"></div>
+                            <div class="bar" style="height: 40px;"></div>
+                            <div class="bar" style="height: 60px;"></div>
+                            <div class="bar" style="height: 80px;"></div>
+                            <div class="bar" style="height: 100px;"></div>
+                            <div class="bar" style="height: 120px;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-around; margin-top: 0.5rem;">
+                            <div class="bar-label">1k</div>
+                            <div class="bar-label">5k</div>
+                            <div class="bar-label">10k</div>
+                            <div class="bar-label">25k</div>
+                            <div class="bar-label">40k</div>
+                            <div class="bar-label">50k</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Важное сообщение о бесплатности и окупаемости -->
+            <div class="success-note">
+                <i class="fas fa-gem" style="margin-right: 8px;"></i>
+                <strong>💡 ВАЖНО: даже если трек наберет больше 5000 прослушиваний — он всё равно остаётся для тебя бесплатным!</strong><br>
+                Почему? Доход от монетизации (~0.07₽ за стрим) при 5000 прослушиваний составляет около 350₽, а при 10 000 — уже ~700₽. 
+                Это покрывает стоимость WAV аренды (700₽) или MP3 аренды (500₽). То есть, когда твой трек перешагнул лимит FFP, 
+                заработанные деньги с лёгкостью оплачивают лицензию, и ты продолжаешь получать прибыль дальше без ограничений!<br><br>
+                <i class="fas fa-handshake"></i> <strong>Обязательное условие:</strong> даже при бесплатном использовании FFP бита — <strong>ты должен связаться и уведомить меня как автора</strong> (написать в Telegram/VK). 
+                Это важно для учёта использования бита и поддержки прозрачного сотрудничества. Я всегда на связи и рад фидбеку!
+            </div>
+        </div>
+
         <div class="section-title">💎 актуальные цены</div>
         <div class="price-grid">
             <div class="price-card"><div class="price-name">mp3 аренда</div><div class="price-amount">500₽</div><div>mp3 + voice-tag, коммерция</div></div>
@@ -402,33 +775,40 @@
             <div class="price-card"><div class="price-name">trackout</div><div class="price-amount">1000₽</div><div><span class="badge-off">временно нет</span></div></div>
             <div class="price-card"><div class="price-name">exclusive</div><div class="price-amount">3000₽</div><div>полные права, снятие с продажи</div></div>
         </div>
-        <!-- free for profit block -->
+
+        <!-- FFP блок с обновлённым текстом -->
         <div class="free-zone">
-            <h3 style="font-size: 1.8rem;">🎁 [FREE FOR PROFIT] — твой хит бесплатно</h3>
-            <p style="margin: 0.8rem 0;">В честь открытия канала: коммерческое использование БЕСПЛАТНО до 5000 прослушиваний. Укажи prod. by maldrion и забирай бит. После 5к стримов — приобрети аренду, и трек останется навсегда.</p>
+            <h3 style="font-size: 1.6rem;">🎁 [FREE FOR PROFIT] — твой хит бесплатно и с выгодой!</h3>
+            <p style="margin: 0.8rem 0;">🔥 <strong>Как это работает:</strong> ты берёшь бит бесплатно, записываешь трек, выпускаешь его на всех площадках. Первые 5000 прослушиваний — полностью бесплатно для тебя, без каких-либо отчислений мне. </p>
+            <p style="margin: 0.8rem 0;">📈 <strong>А если трек набирает больше 5000?</strong> Даже если твой трек "вылетает" далеко за лимит — он всё равно остаётся для тебя выгодным! Доход от монетизации (роялти) с лихвой покрывает стоимость WAV аренды (700₽). По сути, твой трек сам себя окупает, а ты получаешь чистую прибыль сверху.</p>
+            <div class="important-notice" style="margin: 1rem 0;">
+                <i class="fas fa-envelope"></i> <strong>⚠️ ОБЯЗАТЕЛЬНОЕ УСЛОВИЕ:</strong> Даже если ты используешь бит по FFP лицензии — <strong>напиши мне в Telegram или VK</strong>, укажи какой бит используешь. Это нужно для учёта и подтверждения использования. Я всегда открыт к диалогу, дам фидбек на твой трек и, если захочешь, опубликую у себя в канале!
+            </div>
             <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
                 <span>✅ маркировка: [FFP] / #freeforprofit / *</span>
-                <span>✅ кидай свои работы — фидбек и публикация в канале</span>
+                <span>✅ обязательно: prod. by maldrion в названии</span>
+                <span>✅ свяжись со мной после релиза — это важно!</span>
             </div>
         </div>
-        <!-- преимущества -->
+
         <div class="section-title">⚡ почему maldrion?</div>
         <div class="feature-grid">
-            <div class="feature"><i class="fas fa-file-contract" style="color:#7c5cf0; font-size: 1.5rem;"></i><h3>прозрачные лицензии</h3><p>Четкие условия для каждого типа: mp3 аренда, wav, exclusive. Никакой скрытой логики.</p></div>
-            <div class="feature"><i class="fas fa-chart-line" style="color:#7c5cf0; font-size: 1.5rem;"></i><h3>5k стримов FFP</h3><p>Бесплатная монетизация до 5000 прослушиваний — идеальный старт для новичков.</p></div>
-            <div class="feature"><i class="fas fa-gem" style="color:#7c5cf0; font-size: 1.5rem;"></i><h3>эксклюзив без скрытых платежей</h3><p>3000₽ и бит полностью твой. Удаление voice-tag, передача всех прав.</p></div>
+            <div class="feature"><i class="fas fa-file-contract"></i><h3 style="margin-top: 0.5rem;">прозрачные лицензии</h3><p>Четкие условия для каждого типа: mp3 аренда, wav, exclusive. Никакой скрытой логики.</p></div>
+            <div class="feature"><i class="fas fa-chart-line"></i><h3 style="margin-top: 0.5rem;">5k стримов FFP + окупаемость</h3><p>Бесплатный старт, а после лимита доход покрывает лицензию — ты всегда в плюсе.</p></div>
+            <div class="feature"><i class="fas fa-gem"></i><h3 style="margin-top: 0.5rem;">эксклюзив без скрытых платежей</h3><p>3000₽ и бит полностью твой. Удаление voice-tag, передача всех прав.</p></div>
         </div>
-        <!-- как начать - каждый пункт с новой строки -->
-        <div style="background: #070a12; border-radius: 40px; padding: 2rem; margin: 2rem 0;">
+
+        <div class="howto-bg">
             <h3 style="font-size: 1.5rem;">🚀 как начать работать?</h3>
             <div class="howto-list">
                 <div class="howto-item"><span class="howto-num">1.</span> Выбери бит с маркировкой [FFP] или любой другой из каталога.</div>
-                <div class="howto-item"><span class="howto-num">2.</span> Напиши в VK / Telegram, укажи какой бит и тип лицензии.</div>
+                <div class="howto-item"><span class="howto-num">2.</span> Напиши в VK / Telegram, укажи какой бит и тип лицензии (или что берёшь по FFP).</div>
                 <div class="howto-item"><span class="howto-num">3.</span> Получи файл (mp3/wav/trackout), запиши трек, укажи prod. by maldrion.</div>
-                <div class="howto-item"><span class="howto-num">4.</span> Загружай на площадки, собирай прослушивания и монетизируй честно.</div>
+                <div class="howto-item"><span class="howto-num">4.</span> Загружай на площадки, собирай прослушивания — и даже после 5к ты в плюсе!</div>
+                <div class="howto-item"><span class="howto-num">📢</span> <strong>Обязательно уведоми меня после релиза</strong> — я поддержу твой трек репостом и фидбеком!</div>
             </div>
         </div>
-        <!-- социальные иконки и подвал -->
+
         <div class="social-icons">
             <a href="https://vk.com/maldrion" class="social-icon" target="_blank"><i class="fab fa-vk"></i> VK</a>
             <a href="https://t.me/maldrion" class="social-icon" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
@@ -439,16 +819,16 @@
         </footer>
     </div>
 
-    <!-- ЦЕНЫ -->
+    <!-- Остальные страницы (цены, лицензии, faq, договор) -->
     <div id="prices-page" class="page">
         <div class="section-title">💰 полный прайс-лист</div>
         <div class="price-grid">
             <div class="price-card"><div class="price-name">mp3 аренда</div><div class="price-amount">500₽</div><div>mp3 + войс-тег, коммерция разрешена</div></div>
             <div class="price-card"><div class="price-name">wav аренда</div><div class="price-amount">700₽</div><div>wav качество, безлимит по стримам</div></div>
-            <div class="price-card"><div class="price-name">trackout</div><div class="price-amount">1000₽</div><div>временно недоступно, мультитреки</div></div>
+            <div class="price-card"><div class="price-name">trackout</div><div class="price-amount">1000₽</div><div><span class="badge-off">временно нет</span></div></div>
             <div class="price-card"><div class="price-name">exclusive</div><div class="price-amount">3000₽</div><div>полные права, wav+trackout, удаление voice-tag</div></div>
         </div>
-        <div class="free-zone" style="margin-top:0;"><p>🔹 [FREE FOR PROFIT] — 0₽ до 5к стримов. 🔹 [FREE] non-profit — бесплатно без монетизации.</p></div>
+        <div class="free-zone" style="margin-top:0;"><p>🔹 [FREE FOR PROFIT] — 0₽ до 5к стримов, после лимита доход покрывает лицензию! 🔹 [FREE] non-profit — бесплатно без монетизации.</p></div>
         <div class="social-icons">
             <a href="https://vk.com/maldrion" class="social-icon" target="_blank"><i class="fab fa-vk"></i> VK</a>
             <a href="https://t.me/maldrion" class="social-icon" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
@@ -457,7 +837,6 @@
         <footer>© maldrion beats — прозрачные условия. prod. by maldrion — обязательно для каждого трека.</footer>
     </div>
 
-    <!-- ЛИЦЕНЗИИ (подробно) -->
     <div id="licenses-page" class="page">
         <div class="section-title">📋 подробные условия лицензий</div>
         <div class="license-grid">
@@ -465,7 +844,7 @@
             <div class="price-card"><strong>💿 wav аренда — 700₽</strong><br>• wav файл + voice-tag<br>• коммерция, неограниченное количество стримов<br>• указание автора обязательно</div>
             <div class="price-card"><strong>🔧 trackout — 1000₽ (временно недоступен)</strong><br>• отдельные дорожки (drums, melody, fx)<br>• обязательный voice-tag, коммерция разрешена</div>
             <div class="price-card"><strong>💎 exclusive — 3000₽</strong><br>• wav + trackout, полное снятие с продажи<br>• удаление voice-tag по желанию, все права передаются вам<br>• возврат невозможен</div>
-            <div class="price-card"><strong>🔥 FREE FOR PROFIT — 0₽</strong><br>• бесплатно для коммерции до 5000 прослушиваний<br>• после лимита нужно купить аренду<br>• указание prod. by maldrion обязательно</div>
+            <div class="price-card"><strong>🔥 FREE FOR PROFIT — 0₽</strong><br>• бесплатно для коммерции до 5000 прослушиваний<br>• после лимита доход от стримов покрывает стоимость лицензии<br>• <strong>обязательно уведомить автора</strong> о использовании бита<br>• указание prod. by maldrion обязательно</div>
             <div class="price-card"><strong>🎁 FREE (non-profit) — 0₽</strong><br>• только некоммерческое использование. Для монетизации нужна платная лицензия.</div>
         </div>
         <div class="social-icons">
@@ -476,17 +855,16 @@
         <footer>© maldrion beats — прозрачные условия. prod. by maldrion — обязательно для каждого трека.</footer>
     </div>
 
-    <!-- FAQ -->
     <div id="faq-page" class="page">
         <div class="section-title">❓ часто задаваемые вопросы</div>
         <div class="license-grid">
-            <div class="price-card"><strong>Что такое FREE FOR PROFIT?</strong><br>Бесплатное коммерческое использование до 5к стримов. После 5к — приобретите аренду.</div>
+            <div class="price-card"><strong>Что такое FREE FOR PROFIT?</strong><br>Бесплатное коммерческое использование до 5к стримов. Даже если трек набирает больше — доход от монетизации покрывает стоимость WAV аренды (700₽), поэтому ты остаёшься в плюсе!</div>
+            <div class="price-card"><strong>Нужно ли уведомлять автора при использовании FFP бита?</strong><br>Да, обязательно! Напиши в Telegram/VK, укажи какой бит используешь. Это важно для учёта и поддержки.</div>
             <div class="price-card"><strong>Можно ли вернуть деньги?</strong><br>Нет, возврат средств не предусмотрен. Выбирайте лицензию внимательно.</div>
             <div class="price-card"><strong>Как получить договор?</strong><br>Оформление лицензионного договора PDF — 100₽ (доп. услуга). Пишите в ЛС.</div>
             <div class="price-card"><strong>Пишете на заказ?</strong><br>На данный момент нет, только готовые биты.</div>
             <div class="price-card"><strong>Обязательно ли указывать prod. by maldrion?</strong><br>Да, это условие всех лицензий.</div>
             <div class="price-card"><strong>Можно ли использовать exclusive бит в нескольких треках?</strong><br>Да, exclusive дает полные права на бит для любых проектов.</div>
-            <div class="price-card"><strong>Что означает [SOLD]?</strong><br>Бит продан эксклюзивно и является частью портфолио.</div>
         </div>
         <div class="social-icons">
             <a href="https://vk.com/maldrion" class="social-icon" target="_blank"><i class="fab fa-vk"></i> VK</a>
@@ -496,12 +874,11 @@
         <footer>© maldrion beats — прозрачные условия. prod. by maldrion — обязательно для каждого трека.</footer>
     </div>
 
-    <!-- ДОГОВОР -->
     <div id="contract-page" class="page">
         <div class="section-title">📄 лицензионный договор (PDF)</div>
         <div class="free-zone" style="text-align:center;">
-            <i class="fas fa-file-pdf" style="font-size: 2.5rem; color:#7c5cf0;"></i>
-            <h3 style="margin:1rem 0">официальный договор за 100₽</h3>
+            <i class="fas fa-file-pdf" style="font-size: 2.5rem; color:var(--accent);"></i>
+            <h3 style="margin:1rem 0;">официальный договор за 100₽</h3>
             <p>Вы получите индивидуальный PDF-договор с указанием лицензии (mp3 аренда, wav аренда, exclusive), реквизитами и подписью битмейкера. Подходит для юридической чистоты и отчетности.</p>
             <button id="contractBtnAction" class="btn-primary" style="margin-top:1.5rem;">запросить договор → Telegram</button>
             <p style="margin-top:1rem;">* после оплаты лицензии или отдельно — пишите в Telegram, оформляем PDF.</p>
@@ -516,7 +893,90 @@
 </div>
 
 <script>
-    // navigation logic
+    // Калькулятор дохода
+    const streamSlider = document.getElementById('streamSlider');
+    const streamCountDisplay = document.getElementById('streamCountDisplay');
+    const earningsAmount = document.getElementById('earningsAmount');
+    const chartBars = document.getElementById('chartBars');
+    
+    function updateEarnings() {
+        let streams = parseInt(streamSlider.value);
+        streamCountDisplay.textContent = streams.toLocaleString('ru-RU');
+        
+        const royaltyPerStream = 0.07;
+        let earnings = streams * royaltyPerStream;
+        earningsAmount.innerHTML = `≈ ${Math.floor(earnings).toLocaleString('ru-RU')} ₽`;
+        
+        const percentages = [0.02, 0.1, 0.2, 0.5, 0.8, 1.0];
+        const maxHeight = 120;
+        const bars = chartBars.querySelectorAll('.bar');
+        const streamPercent = Math.min(1, streams / 50000);
+        
+        bars.forEach((bar, idx) => {
+            let targetPercent = Math.min(1, streamPercent / percentages[idx] * 0.8);
+            if (idx === 0 && streams > 1000) targetPercent = Math.min(0.3, streamPercent * 0.5);
+            if (idx === 1 && streams > 5000) targetPercent = Math.min(0.5, streamPercent * 0.7);
+            if (idx === 2 && streams > 10000) targetPercent = Math.min(0.7, streamPercent * 0.9);
+            if (idx === 3 && streams > 25000) targetPercent = Math.min(0.85, streamPercent);
+            if (idx === 4 && streams > 40000) targetPercent = Math.min(0.95, streamPercent);
+            if (idx === 5) targetPercent = streamPercent;
+            let height = Math.max(8, targetPercent * maxHeight);
+            bar.style.height = `${height}px`;
+        });
+    }
+    
+    if (streamSlider) {
+        streamSlider.addEventListener('input', updateEarnings);
+        updateEarnings();
+    }
+    
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const mobileThemeToggle = document.getElementById('mobileThemeToggle');
+    
+    function updateThemeButton(isDark) {
+        if (isDark) {
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i> Светлая тема';
+            if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-sun"></i> Светлая тема';
+        } else {
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i> Тёмная тема';
+            if (mobileThemeToggle) mobileThemeToggle.innerHTML = '<i class="fas fa-moon"></i> Тёмная тема';
+        }
+    }
+    
+    function setTheme(isDark) {
+        if (isDark) {
+            document.body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+            updateThemeButton(true);
+        } else {
+            document.body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+            updateThemeButton(false);
+        }
+    }
+    
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+        setTheme(true);
+    } else {
+        setTheme(false);
+    }
+    
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.classList.contains('dark');
+        setTheme(!isDark);
+    });
+    
+    if (mobileThemeToggle) {
+        mobileThemeToggle.addEventListener('click', () => {
+            const isDark = document.body.classList.contains('dark');
+            setTheme(!isDark);
+            document.getElementById('mobileMenu').classList.remove('open');
+        });
+    }
+    
+    // Navigation logic
     const pages = {
         home: document.getElementById('home-page'),
         prices: document.getElementById('prices-page'),
@@ -531,29 +991,27 @@
         });
         pages[pageId].classList.add('active');
         
-        // update nav active styles
         document.querySelectorAll('.nav-item').forEach(link => {
             link.classList.remove('active');
             if(link.getAttribute('data-page') === pageId) link.classList.add('active');
         });
-        // close mobile menu if open
         document.getElementById('mobileMenu').classList.remove('open');
     }
     
-    // desktop nav
     document.querySelectorAll('.nav-item').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const page = link.getAttribute('data-page');
-            if(page === 'home') setActivePage('home');
-            else if(page === 'prices') setActivePage('prices');
-            else if(page === 'licenses') setActivePage('licenses');
-            else if(page === 'faq') setActivePage('faq');
-            else if(page === 'contract') setActivePage('contract');
-        });
+        if(link.getAttribute('data-page')) {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const page = link.getAttribute('data-page');
+                if(page === 'home') setActivePage('home');
+                else if(page === 'prices') setActivePage('prices');
+                else if(page === 'licenses') setActivePage('licenses');
+                else if(page === 'faq') setActivePage('faq');
+                else if(page === 'contract') setActivePage('contract');
+            });
+        }
     });
     
-    // mobile nav
     document.querySelectorAll('.mobile-nav-item').forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
@@ -566,7 +1024,6 @@
         });
     });
     
-    // hamburger toggle
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     hamburger.addEventListener('click', () => {
@@ -578,7 +1035,6 @@
         }
     });
     
-    // кнопка "выбрать лицензию" → перекидывает на страницу лицензий
     const exploreBtn = document.getElementById('exploreBtn');
     if(exploreBtn) {
         exploreBtn.addEventListener('click', () => {
@@ -586,7 +1042,6 @@
         });
     }
     
-    // кнопка "связаться" → открывает Telegram
     const contactBtn = document.getElementById('contactBtn');
     if(contactBtn) {
         contactBtn.addEventListener('click', () => {
@@ -594,7 +1049,6 @@
         });
     }
     
-    // кнопка договора → перекидывает в Telegram
     const contractAction = document.getElementById('contractBtnAction');
     if(contractAction) {
         contractAction.addEventListener('click', () => {
@@ -602,7 +1056,6 @@
         });
     }
     
-    // начальная страница — home
     setActivePage('home');
 </script>
 </body>
